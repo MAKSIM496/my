@@ -3,49 +3,71 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Фон и текст */
 body {
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f0f0f0, #d9e6f2);
     color: #333;
+    line-height: 1.6;
 }
 
 /* Шапка */
 header {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
+    gap: 25px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     color: #ff6600;
+    transform: scale(1.1);
 }
 
 /* Основной контент */
-main {
-    padding: 50px 20px;
+.section {
+    padding: 80px 20px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-main section {
-    margin-bottom: 50px;
+.section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #222;
 }
 
 button {
@@ -53,7 +75,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     background-color: #ff6600;
     color: #fff;
     transition: background-color 0.3s, transform 0.2s;
@@ -61,13 +83,14 @@ button {
 
 button:hover {
     background-color: #e55b00;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* Футер */
 footer {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 40px;
 }
